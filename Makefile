@@ -1,4 +1,5 @@
 NAME = app
+NAME_DB = mysql
 
 up:
 	docker-compose up
@@ -6,11 +7,14 @@ up:
 up-d:
 	docker-compose up -d
 
-up-build:
+up-b:
 	docker-compose up --build
 
 build:
 	docker-compose build
+
+build-n:
+	docker-compose build --no-cache
 
 stop:
 	docker-compose stop
@@ -33,3 +37,6 @@ ps-a:
 
 login:
 	docker exec -it $(NAME) sh
+
+login-db:
+	docker exec -it $(NAME_DB) sh
