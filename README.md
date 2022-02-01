@@ -13,5 +13,7 @@
 ## コンテナにログインして db を作成する
 
 > $make login
+> 
 > $rails db:create
+> 
 > $rails db:migrate
